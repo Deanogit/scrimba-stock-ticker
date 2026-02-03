@@ -13,3 +13,7 @@ We use `.setInterval()` to repeatedly call the `renderStockTicker()` function ev
     - `.getElementById` is used to manipulate the DOM in the `index.html`, getting the `stockData` from `getStockData()` in the `fakeStockAPI.js` file.
 
     - Each time `getStockData()` is called inside the `setInterval()` the function call generates a new random number between 0 and 3 to two decimal places. It also generates a new Date object, which is rendered as a string by using `.toLocaleSTimetring()`
+
+    - `stockDisplayPriceIcon` is reset every `renderStockticker()` function call, in order to ensure only one icon is shown, as `appendChild()` would continue to add an additional icon to each function call without the reset `stockDisplayPriceIcon.innerHTML = '';`
+
+    - `prevPrice` is set to `price` at the end of each function call
