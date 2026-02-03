@@ -21,7 +21,7 @@ function renderStockTicker(stockData) {
       ? 'green.svg'
       : price < prevPrice
         ? 'red.svg'
-        : 'gray.svg';
+        : 'grey.svg';
 
   const priceIconElement = document.createElement('img');
   priceIconElement.src = `svg/${priceDirectionIcon}`;
